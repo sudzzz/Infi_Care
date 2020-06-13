@@ -1,0 +1,54 @@
+body {
+  font-size: .875rem;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+
+
+.container{
+  height: 550px;
+}
+#map{
+  width: 100%;
+  height: 100%;
+  border: 1px solid blue;
+}
+
+[role="main"] {
+  padding-top: 48px; /* Space for fixed navbar */
+}
+
+/*
+ * Navbar
+ */
+
+ .navbar-brand{
+   font-family: "Ubuntu";
+   padding-left: 30px;
+   font-size: 3rem;
+   font-weight: bold;
+ }
+ .nav-item{
+   padding: 0 18px;
+ }
+ .nav-link{
+   font-size: 1.2rem;
+   font-family: "Montserrat-Light"
+ }
+
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}

@@ -11,6 +11,8 @@ if(!isset($_SESSION['username']))
 
 $searchKey = "";
 
+$date1 = date("Y-m-d");
+$date = strtotime($date1);
 
 ?>
 
@@ -81,6 +83,7 @@ $searchKey = "";
                    </thead>
                    <?php while ($row = $result->fetch_assoc()): ?>
                      <tr>
+                       <?php if((strtotime($row['expiry_date'])-$date)>0): ?>
                        <td><?php echo $row['name']; ?></td>
                        <td><?php echo $row['medicine_name'].'-'.$row['company_name']; ?></td>
                        <td><?php echo $row['number_tablets']; ?></td>
@@ -89,6 +92,7 @@ $searchKey = "";
                           <a href="checkout.php?order=<?php echo $row['id']; ?>"
                            class = "btn btn-info" name="order">Order Now</a>
                        </td>
+                       <?php endif; ?>
                      </tr>
                    <?php endwhile; ?>
                  </table>

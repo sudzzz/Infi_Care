@@ -7,7 +7,9 @@ Wastage of medicines is a global issue. In country like India with such a huge p
   - Recycle : Recycling the medicines which is expired or about to expire.
   - Recirculating : Recirculating the recycled medicines.
 
-Infi-Care Cares for you and the socitey. It provides customers the platform to submit the unused and expired medicines back to the pharmacies which are collection points. Depending on the medicine submitted, the customer gets points which can be redeemed on future purchases from the pharmacy. The pharmacies will update the record on Infi-Care which will keep track of expired and un-expired Medicines. The expired medicines will be sent back to company through backchain for processing to prevent pollution caused by Medi-Waste. The Medicines which is not expired and can be used will be visible to Hospitals, Nursing Homes, NGO's who can purchase these medicines from respective pharmacies at a very low price. This will also provide medicines to the sections of socitey which cannot afford it.
+Infi-Care Cares for you and the socitey. It provides customers the platform to submit the unused and expired medicines back to the pharmacies which are collection points. Depending on the medicine submitted, the customer gets points which can be redeemed on future purchases from the pharmacy. The pharmacies will update the record on Infi-Care which will keep track of expired and un-expired Medicines. The expired medicines will be sent back to company through backchain for processing to prevent pollution caused by Medi-Waste. The Medicines which is not expired and can be used will be visible to NGO's who can purchase these medicines from respective pharmacies at a very low price. This will also provide medicines to the sections of socitey which cannot afford it.
+
+It also has a feature of ### Availability Of Doctors in the Customer part, where user can go
 
 
 ## Procedure

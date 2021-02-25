@@ -24,7 +24,17 @@ There are 5 types of users in this site :
  
 ## Tech-Stack
 
-- 
+- **Front-end**
+  * HTML
+  * CSS
+  * Bootstrap
+ - **Back-end**
+  * PHP
+  * MySQL database
+  * Google Places API
+  * Google Search API
+  * Google Locations API
+  
 
 
 ## Procedure

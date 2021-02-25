@@ -53,13 +53,17 @@ if(isset($_POST["submit"]))
       mysqli_query($conn,$query);
     }
 
+    if($usertype == "ngo")
+    {
+      $query = "INSERT INTO ngo(username,address) VALUES('$username','$address')";
+      mysqli_query($conn,$query);
+    }
+
     if($usertype == "hospital")
     {
       $query = "INSERT INTO hospital(username,address) VALUES('$username','$address')";
       mysqli_query($conn,$query);
     }
-
-
 
     echo "<script> alert('You are registered successfully!!'); window.location = 'login.php'</script>";
   }
@@ -160,7 +164,8 @@ $conn->close();
             <option value="customer">Customer</option>
             <option value="company">Company</option>
             <option value="pharmacy">Pharmacy</option>
-            <option value="hospital">Hospital/NGO/Charitable Trust</option>
+            <option value="ngo">NGO</option>
+            <option value="hospital">Hospital</option>
           </select>
     </body>
 

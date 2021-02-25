@@ -66,7 +66,7 @@
           <div class="carousel-item">
             <div class="row">
               <div class="col-lg-6">
-                <h1 class="big-heading">Let's not waste unsed Medicine.</h1>
+                <h1 class="big-heading">Let's not waste unused Medicine.</h1>
               </div>
               <div class="col-lg-6">
                 <img class="title-image" src="images/title.jfif" >

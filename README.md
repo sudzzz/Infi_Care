@@ -29,11 +29,11 @@ There are 5 types of users in this site :
   * CSS
   * Bootstrap
  - **Back-end**
-  * PHP
-  * MySQL database
-  * Google Places API
-  * Google Search API
-  * Google Locations API
+    * PHP
+    * MySQL database
+    * Google Places API
+    * Google Search API
+    * Google Locations API
   
 
 

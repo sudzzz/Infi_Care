@@ -13,9 +13,10 @@ Infi-Care Cares for you and the socitey. It provides customers the platform to s
 
 There are 5 types of users in this site :
 
- - Customer 
-    * Once, registered as a customer, the user is shown a map with his/her address as the centre of the map. In the radius of 5KM all the nearby pharmacies are    shown which are registered. On clicking the marker of the pharmacies shown, it shows the shortest path form customer's house to that pharmacy. This also contains a feature of **Availability Of Doctors** 
-
+ - Customer :
+    * Once, registered as a customer, the user is shown a map with his/her address as the centre of the map. In the radius of 5KM all the nearby pharmacies are    shown which are registered. On clicking the marker of the pharmacies shown, it shows the shortest path form customer's house to that pharmacy. 
+    * This also contains a feature of **Availability Of Doctors** in which you have to fill a form of your location, state and type of doctor you want to visit(ex- Dermatologist, Cardiologist etc). It will then search that type of doctor in a radius of 5KM from the address you filled in the form. It will then show you list of all the nearby doctors and you can see their schedule and phone number.
+ - Pharmacy : 
 
 
 ## Procedure

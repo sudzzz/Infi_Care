@@ -10,6 +10,8 @@ if ($conn->connect_error) {
 
 mysqli_select_db($conn,'recmeds');
 
+$s = "TRUNCATE TABLE nearby";
+mysqli_query($conn,$s);
 
 
 //When Submit button is clicked
@@ -51,12 +53,13 @@ if(isset($_POST["submit"]))
     {
       header('location: home/pharmacy/pharmacy.php');
     }
-    elseif($_SESSION['usertype'] === 'hospital')
+    elseif($_SESSION['usertype'] === 'ngo')
+    {
+      header('location: home/ngo/ngo.php');
+    }
+    else
     {
       header('location: home/hospital/hospital.php');
-    }
-    else {
-      header('location: home/company/company.php');
     }
 
   }

@@ -53,8 +53,8 @@ if(isset($_GET['accept']))
               <table class = "table">
                 <thead>
                   <tr>
-                    <th>Hospital Name</th>
-                    <th>Hospital Address</th>
+                    <th>NGO Name</th>
+                    <th>NGO Address</th>
                     <th>Name Of Medicine</th>
                     <th>No. Of Tablets</th>
                     <th>Expected Date Of Delivery</th>
@@ -63,8 +63,8 @@ if(isset($_GET['accept']))
                 </thead>
                 <?php while ($row = $result->fetch_assoc()): ?>
                   <tr>
-                    <td><?php echo $row['hospital']; ?></td>
-                    <td><?php echo $row['hospital_address']; ?></td>
+                    <td><?php echo $row['ngo']; ?></td>
+                    <td><?php echo $row['ngo_address']; ?></td>
                     <td><?php echo $row['medicine_name']; ?></td>
                     <td><?php echo $row['number_tablets']; ?></td>
                     <td><?php echo $row['dod']; ?></td>

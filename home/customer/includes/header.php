@@ -8,6 +8,7 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a href="../../logout.php" class="btn btn-info" role="button">Logout</a>
+        <a href="doctor_inquiry.php" class="btn btn-info" role="button">Doctor Inquiry</a>
       </li>
     </ul>
   </div>

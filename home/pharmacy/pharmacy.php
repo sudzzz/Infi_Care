@@ -16,6 +16,69 @@ if(!isset($_SESSION['username']))
   header('location: ../../index.php');
 }
 
+$user = $_SESSION['username'];
+$address = $_SESSION['address'];
+$name = $_SESSION['name'];
+$result = $mysqli->query("SELECT * from pharmacy where username = '$user'");
+
+$date1 = date("Y-m-d");
+$date = strtotime($date1);
+
+/*while ($r = $result->fetch_assoc())
+{
+  $expiry_date = $r['expiry_date'];
+  if((strtotime($expiry_date)-$date)<0)
+  {
+    $status = 0;
+    $medicine_name = $r['medicine_name'];
+    $number_tablets = $r['number_tablets'];
+    $company_name = $r['company_name'];
+    $res = $mysqli->query("SELECT * FROM expire WHERE store_name='$name'");
+    $n=0;
+    while($rows = $res->fetch_assoc())
+    {
+      if($rows['medicine_name']==$medicine_name and $rows['status']==0)
+      {
+        $n = $n+1;
+        $number = $rows['number_tablets'];
+        $number = $number + $number_tablets;
+        $mysqli->query("UPDATE expire SET number_tablets='$number' WHERE medicine_name='$medicine_name'") or die($mysqli->error);
+      }
+      if($n==0)
+      {
+        $mysqli->query("INSERT INTO expire(medicine_name,company_name,number_tablets,store_name,store_address,status) VALUES('$medicine_name','$company_name','$number_tablets','$name','$address','$status')") or die($mysqli->error);
+      }
+
+      // $mysqli->query("DELETE FROM pharmacy WHERE medicine_name='$medicine_name',company_name='$company_name',expiry_date='$expiry_date'") or die($mysqli->error);
+
+    }
+  }
+}*/
+
+/*if((strtotime($expiry_date)-$date)<0)
+{
+  $status = 0;
+  $res = $mysqli->query("SELECT * FROM expire WHERE store_name='$name'");
+  $n=0;
+  while($r = $res->fetch_assoc())
+  {
+    if($r['medicine_name']==$medicine_name and $r['status']==0)
+    {
+      $n = $n+1;
+      $number = $r['number_tablets'];
+      $number = $number + $number_tablets;
+      $mysqli->query("UPDATE expire SET number_tablets='$number' WHERE medicine_name='$medicine_name'") or die($mysqli->error);
+    }
+    echo "<script> alert('Data is updated and stored in expired section successfully!!'); window.location = 'pharmacy.php'</script>";
+  }
+  if($n==0)
+  {
+    $mysqli->query("INSERT INTO expire(medicine_name,company_name,number_tablets,store_name,store_address,status) VALUES('$medicine_name','$company_name','$number_tablets','$name','$address','$status')") or die($mysqli->error);
+    echo "<script> alert('Data is updated and stored in expired section successfully!!'); window.location = 'pharmacy.php'</script>";
+  }
+
+
+*/
 ?>
 
 
@@ -35,12 +98,6 @@ if(!isset($_SESSION['username']))
                 <?php require_once 'includes/sidebar.php'; ?>
                 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                     <h1 style="margin-top: 10px">Medicine Records (Unexpired)</h1>
-                    <?php
-                      $user = $_SESSION['username'];
-                      $result = $mysqli->query("SELECT * from pharmacy where username = '$user'");
-                      //pre_r($result);
-                      //pre_r($result->fetch_assoc());
-                    ?>
                     <div class="row justify-content-center">
                       <table class = "table">
                         <thead>
@@ -54,6 +111,7 @@ if(!isset($_SESSION['username']))
                         </thead>
                         <?php while ($row = $result->fetch_assoc()): ?>
                           <tr>
+                            <?php if((strtotime($row['expiry_date'])-$date)>0): ?>
                             <td><?php echo $row['medicine_name']; ?></td>
                             <td><?php echo $row['number_tablets']; ?></td>
                             <td><?php echo $row['company_name']; ?></td>
@@ -64,6 +122,8 @@ if(!isset($_SESSION['username']))
                                 <a href="pharmacy.php?delete=<?php echo $row['id']; ?>"
                                   class = "btn btn-danger" name="delete"><i class="fa fa-trash-o" style="font-size:24px"></i></a>
                             </td>
+                            <?php endif; ?>
+
                           </tr>
                         <?php endwhile; ?>
                       </table>

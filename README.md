@@ -31,6 +31,7 @@ There are 5 types of users in this site :
  - **Back-end**
     * PHP
     * MySQL database
+    * Google Maps API
     * Google Places API
     * Google Search API
     * Google Locations API

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2022 at 04:49 AM
+-- Generation Time: May 05, 2022 at 05:15 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.4.16
 
@@ -20,6 +20,24 @@ SET time_zone = "+00:00";
 --
 -- Database: `recmeds`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blood`
+--
+
+CREATE TABLE `blood` (
+  `id` int(255) NOT NULL,
+  `receiver` varchar(100) NOT NULL,
+  `address` varchar(150) NOT NULL,
+  `sender` varchar(100) NOT NULL,
+  `blood` varchar(5) NOT NULL,
+  `units` int(10) NOT NULL,
+  `priority` varchar(10) NOT NULL,
+  `dod` date NOT NULL,
+  `status` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -102,6 +120,25 @@ CREATE TABLE `hospital` (
 
 INSERT INTO `hospital` (`id`, `username`, `address`, `lat`, `lng`) VALUES
 (1, 'JNM', 'Kolkata JNM Hospital quarter E/88, Kalyani, West Bengal 741235', 22.974371, 88.455711);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `medicine`
+--
+
+CREATE TABLE `medicine` (
+  `id` int(255) NOT NULL,
+  `receiver` varchar(100) NOT NULL,
+  `address` varchar(150) NOT NULL,
+  `sender` varchar(100) NOT NULL,
+  `medicine` varchar(100) NOT NULL,
+  `company` varchar(100) NOT NULL,
+  `dozes` int(50) NOT NULL,
+  `priority` varchar(10) NOT NULL,
+  `dod` date NOT NULL,
+  `status` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -280,6 +317,12 @@ INSERT INTO `stores` (`id`, `username`, `name`, `address`, `lat`, `lng`) VALUES
 --
 
 --
+-- Indexes for table `blood`
+--
+ALTER TABLE `blood`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `coustomer`
 --
 ALTER TABLE `coustomer`
@@ -302,6 +345,12 @@ ALTER TABLE `expire`
 -- Indexes for table `hospital`
 --
 ALTER TABLE `hospital`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `medicine`
+--
+ALTER TABLE `medicine`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -346,6 +395,12 @@ ALTER TABLE `stores`
 --
 
 --
+-- AUTO_INCREMENT for table `blood`
+--
+ALTER TABLE `blood`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `coustomer`
 --
 ALTER TABLE `coustomer`
@@ -368,6 +423,12 @@ ALTER TABLE `expire`
 --
 ALTER TABLE `hospital`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `medicine`
+--
+ALTER TABLE `medicine`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `nearby`

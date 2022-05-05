@@ -11,7 +11,7 @@
 		private $conn;
 		private $tableName = "stores"; //Has address of Pharmacies
     private $table     = "coustomer";  //Has address of coustomers
-    private $tab       = "hospital";  //Has address of coustomers
+    private $tab       = "hospital";  //Has address of hospital
 
 		function setId($id) { $this->id = $id; }
 		function getId() { return $this->id; }

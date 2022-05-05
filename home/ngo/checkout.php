@@ -33,14 +33,14 @@ if(isset($_POST['submit']))
     $number = $_POST['number_tablets'];
   if($number<=$number_tablets)
   {
-    $hospital = $_SESSION['name'];
+    $ngo = $_SESSION['name'];
     $store = $_POST['store'];
     $medicine_name = $_POST['medicine_name'];
     $dod = $_POST['dod'];
-    $hospital_address = $_POST['address'];
+    $ngo_address = $_POST['address'];
     $status = 0;
 
-    $mysqli->query("INSERT INTO orders(ngo,ngo_address,store,medicine_name,number_tablets,dod,status) VALUES('$hospital','$hospital_address','$store','$medicine_name','$number','$dod',$status)") or die($mysqli->error);
+    $mysqli->query("INSERT INTO orders(ngo,ngo_address,store,medicine_name,number_tablets,dod,status) VALUES('$ngo','$ngo_address','$store','$medicine_name','$number','$dod',$status)") or die($mysqli->error);
     echo "<script> alert('Your Order has been placed successfully!!'); window.location = 'ngo.php'</script>";
 
     $number_tablets = $number_tablets - $number;

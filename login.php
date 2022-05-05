@@ -34,7 +34,7 @@ if(isset($_POST["submit"]))
   $num = mysqli_num_rows($result);                //Check if there is only 1 row for given email and password i.e. no duplicate data
 
 
-  if($num==1)   // If entered email or username exists
+  if($num==1)   // If entered email or username exists we store the data of the logged in user in a session.
   {
     $_SESSION['id']       = $row['id'];
     $_SESSION['name']     = $row['name'];
@@ -56,6 +56,10 @@ if(isset($_POST["submit"]))
     elseif($_SESSION['usertype'] === 'ngo')
     {
       header('location: home/ngo/ngo.php');
+    }
+    elseif($_SESSION['usertype'] === 'company')
+    {
+      header('location: home/company/company.php');
     }
     else
     {
